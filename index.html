@@ -2,120 +2,183 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>MTRP | الصفحة الرئيسية</title>
+  <title>MTRP | Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Segoe UI",Tahoma;
+      background:#0b0f1a;
+      color:#e5e7eb;
     }
-    header {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #22c55e;
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER */
+    header{
+      background:#020617;
+      border-bottom:1px solid #1f2933;
     }
-    header h1 {
-      margin: 0;
-      color: #22c55e;
+    .topbar{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 20px;
     }
-    nav {
-      background: #020617;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
+    .logo{
+      font-size:22px;
+      font-weight:bold;
+      color:#22c55e;
     }
-    nav a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: bold;
+    nav a{
+      margin:0 10px;
+      font-size:15px;
+      color:#cbd5e1;
     }
-    nav a:hover {
-      color: #22c55e;
+    nav a:hover{color:#22c55e}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(135deg,#020617,#0b0f1a);
+      padding:90px 20px;
+      text-align:center;
     }
-    .hero {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #020617, #0f172a);
+    .hero h1{
+      font-size:42px;
+      margin-bottom:15px;
     }
-    .hero h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
+    .hero p{
+      max-width:700px;
+      margin:auto;
+      line-height:1.9;
+      color:#cbd5e1;
     }
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.8;
+    .hero .btns{
+      margin-top:30px;
     }
-    .sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      margin:5px;
+      border-radius:8px;
+      font-weight:bold;
     }
-    .card {
-      background: #020617;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    .btn-green{background:#22c55e;color:#020617}
+    .btn-dark{border:1px solid #22c55e;color:#22c55e}
+
+    /* SECTIONS */
+    .section{
+      max-width:1200px;
+      margin:auto;
+      padding:60px 20px;
     }
-    .card h3 {
-      color: #22c55e;
-      margin-top: 0;
+    .section h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#22c55e;
     }
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      color: #9ca3af;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+    .card{
+      background:#020617;
+      padding:25px;
+      border-radius:14px;
+      border:1px solid #1f2933;
+    }
+    .card h3{margin-top:0;color:#22c55e}
+    .card p{color:#cbd5e1;line-height:1.8}
+
+    /* FOOTER */
+    footer{
+      background:#020617;
+      border-top:1px solid #1f2933;
+      text-align:center;
+      padding:25px;
+      color:#9ca3af;
+      font-size:14px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>MTRP</h1>
-  <p>خادم رول بلاي عربي احترافي</p>
+  <div class="topbar">
+    <div class="logo">SoonRP</div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#rules">القوانين</a>
+      <a href="#apply">التقديم</a>
+      <a href="#store">المتجر</a>
+      <a href="#support">الدعم</a>
+    </nav>
+  </div>
 </header>
 
-<nav>
-  <a href="#">الرئيسية</a>
-  <a href="#">القوانين</a>
-  <a href="#">التقديم</a>
-  <a href="#">المتجر</a>
-  <a href="#">الدعم</a>
-</nav>
-
 <section class="hero">
-  <h2>مرحبا بك في MTRP</h2>
+  <h1>مرحبا بك في SoonRP</h1>
   <p>
-    سيرفر رول بلاي عربي يقدم تجربة واقعية، أنظمة متكاملة، وإدارة احترافية.
+    سيرفر رول بلاي عربي احترافي يقدم تجربة واقعية متكاملة بأنظمة حديثة، إدارة صارمة، ومجتمع راقي.
   </p>
+  <div class="btns">
+    <a class="btn btn-green" href="#apply">التقديم الآن</a>
+    <a class="btn btn-dark" href="#rules">القوانين</a>
+  </div>
 </section>
 
-<section class="sections">
-  <div class="card">
-    <h3>🎮 أنظمة متطورة</h3>
-    <p>أنظمة رول بلاي حديثة، وظائف، عصابات، وشرطة.</p>
+<section class="section">
+  <h2>لماذا MTRP؟</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🎮 أنظمة رول بلاي</h3>
+      <p>وظائف، عصابات، شركات، شرطة، إسعاف، وقضاء متكامل.</p>
+    </div>
+    <div class="card">
+      <h3>👮 إدارة احترافية</h3>
+      <p>إدارة فعالة تضمن العدل وتطبيق القوانين بدون استثناء.</p>
+    </div>
+    <div class="card">
+      <h3>🌍 مجتمع منظم</h3>
+      <p>بيئة لعب محترمة مع فعاليات يومية وتحديثات مستمرة.</p>
+    </div>
   </div>
+</section>
+
+<section class="section" id="rules">
+  <h2>القوانين العامة</h2>
   <div class="card">
-    <h3>👮 إدارة قوية</h3>
-    <p>إدارة فعالة تضمن بيئة لعب عادلة ومنظمة.</p>
+    <p>• احترام الجميع إلزامي<br>• يمنع التخريب أو الاستفزاز<br>• الالتزام بالرول بلاي الواقعي<br>• قرارات الإدارة نهائية</p>
   </div>
+</section>
+
+<section class="section" id="apply">
+  <h2>التقديم</h2>
   <div class="card">
-    <h3>🌍 مجتمع عربي</h3>
-    <p>مجتمع نشط ومحترم مع فعاليات مستمرة.</p>
+    <p>التقديم مفتوح للإدارة، الشرطة، الإسعاف، والعصابات حسب الشروط.</p>
+  </div>
+</section>
+
+<section class="section" id="store">
+  <h2>المتجر</h2>
+  <div class="card">
+    <p>متجر داعم للسيرفر (عرض فقط – بدون دفع حقيقي).</p>
+  </div>
+</section>
+
+<section class="section" id="support">
+  <h2>الدعم الفني</h2>
+  <div class="card">
+    <p>للدعم والمساعدة يرجى التواصل عبر ديسكورد السيرفر.</p>
   </div>
 </section>
 
 <footer>
-  © 2026 MTRP – جميع الحقوق محفوظة
+ AbuQHT – جميع الحقوق محفوظة
 </footer>
 
 </body>
 </html>
-
